@@ -44,5 +44,5 @@ func getProfilePictueByUserName(context *gin.Context) {
 func main() {
 	router := gin.Default()
 	router.GET("/:username", getProfilePictueByUserName)
-	router.Run(":8080")
+	router.Run()
 }
