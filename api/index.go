@@ -41,7 +41,7 @@ func getProfilePictueByUserName(context *gin.Context) {
 	context.IndentedJSON(http.StatusOK, result)
 }
 
-func main() {
+func Handler() {
 	router := gin.Default()
 	router.GET("/:username", getProfilePictueByUserName)
 	router.Run(":8080")
