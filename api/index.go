@@ -1,4 +1,4 @@
-package handler
+package main
 
 import (
 	"log"
@@ -41,7 +41,7 @@ func getProfilePictueByUserName(context *gin.Context) {
 	context.IndentedJSON(http.StatusOK, result)
 }
 
-func Handler() {
+func main() {
 	router := gin.Default()
 	router.GET("/:username", getProfilePictueByUserName)
 	router.Run(":8080")
